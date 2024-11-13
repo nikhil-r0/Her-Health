@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url('https://img.freepik.com/free-vector/flat-world-humanitarian-day-background_23-2149456286.jpg?t=st=1731515410~exp=1731519010~hmac=a7791da5a0a014c5f38fd9383df0add898e9c7685fb9ddff0e6e732f06f7b2c4&w=1060');
+      background-size: cover;
+      background-position: top;
+      background-repeat: round;
+      background-color: #f6f2f4;
+    }
+    .login-container {
+      width: 300px; 
+      padding: 70px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .login-button:hover {
+      background-color: #c62839;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" placeholder="Email or Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting traditionally
+      // Here you would typically check the entered credentials
+      // For demonstration, we assume login is successful
+      window.location.href = 'index.html'; // Redirect to homepage
+    });
+  </script>
+
+</body>
+</html>

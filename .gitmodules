@@ -1,0 +1,3 @@
+[submodule "HealthApp"]
+	path = HealthApp
+	url = git@github.com:nikhil-r0/HealthApp.git

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HerHealth - Home</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    /* Header Styling */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f8f8f8;
+      border-bottom: 2px solid #ddd;
+    }
+    .header-logo h1 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .header-nav a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+    .header-nav a:hover {
+      background-color: #ddd;
+    }
+    .button { 
+      padding: 10px 15px; 
+      border-radius: 5px; 
+      font-weight: bold;
+    }
+    .donate-button {
+      background-color: #e63946;
+      color: #fff;
+    }
+    .login-btn { 
+      background-color: hsl(0, 0%, 99%); 
+      color: #fff;
+    }
+    .logout-btn { 
+      background-color: #444; 
+      color: #fff;
+    }
+    /* Hero Section Styling */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-image: url('https://static01.nyt.com/images/2014/03/28/world/asia/28-hospital-2-IndiaInk/28-hospital-2-IndiaInk-blog480.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      color: white;
+      padding-left: 50px;
+      text-align: left;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero h1, .hero p, .hero .donate-now {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+    .hero .donate-now {
+      padding: 12px 24px;
+      font-size: 1.25rem;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .hero .donate-now:hover {
+      background-color: #c62839;
+    }
+    /* Impact Section */
+    .impact-section {
+      padding: 4rem 1rem;
+      background-color: #fff;
+      text-align: center;
+    }
+    .impact-section h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .impact-section p {
+      font-size: 1.25rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+    .impact-stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+    .impact-stat {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+    .impact-value {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #e63946;
+      margin-bottom: 0.5rem;
+    }
+    .impact-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .impact-description {
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-logo">
+      <h1><strong>HerHealth</strong></h1>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="hospital.html">Hospitals</a>
+      <a href="donation.html" class="donate-button">Donate</a>
+      <a href="#" id="authButton" class="button login-btn">Login</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Supporting Rural Healthcare</h1>
+    <p>Join us in transforming lives—your donation provides critical medical equipment to rural hospitals, saving lives and building healthier communities. Every contribution counts, every dollar makes a difference!</p>
+    <a href="donation.html" class="donate-now">Donate Now ❤️</a>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="impact-section">
+    <h2>Our Impact</h2>
+    <p>Every donation helps improve healthcare access in rural communities.</p>
+    <div class="impact-stats">
+      <div class="impact-stat">
+        <div class="impact-value">150+</div>
+        <div class="impact-title">Equipment Provided</div>
+        <p class="impact-description">Medical devices donated to rural hospitals</p>
+      </div>
+      <div class="impact-stat">
+        <div class="impact-value">25</div>
+        <div class="impact-title">Hospitals Supported</div>
+        <p class="impact-description">Rural healthcare facilities receiving assistance</p>
+      </div>
+      <div class="impact-stat">
+        <div class="impact-value">50,000+</div>
+        <div class="impact-title">Lives Impacted</div>
+        <p class="impact-description">Patients benefiting from improved care</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const isLoggedIn = localStorage.getItem('loggedIn');
+    function updateAuthButton() {
+      const authButton = document.getElementById('authButton');
+      if (isLoggedIn) {
+        authButton.textContent = 'Logout';
+        authButton.className = 'button logout-btn';
+        authButton.innerHTML += ' <span class="logout-icon">🔒</span>';
+        authButton.onclick = () => {
+          localStorage.removeItem('loggedIn');
+          location.reload();
+        };
+      } else {
+        authButton.textContent = 'Login';
+        authButton.className = 'button login-btn';
+        authButton.href = 'login.html';
+      }
+    }
+    updateAuthButton();
+  </script>
+
+</body>
+</html>

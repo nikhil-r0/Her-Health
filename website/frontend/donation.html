@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HerHealth-Donation</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+  <style>
+
+    /* Header Styling */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f8f8f8;
+      border-bottom: 2px solid #ddd;
+    }
+    .header-logo h1 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .header-nav a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+    .header-nav a:hover {
+      background-color: #ddd;
+    }
+
+    /* General styling */
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
+    .container { max-width: 900px; margin: auto; padding: 20px; }
+
+    /* Header and Title */
+    .header { text-align: center; margin-bottom: 30px; }
+    .header h1 { font-size: 2.5em; color: #000000; }
+    .header p { color: #555; }
+    .donate-button {
+      background-color: #e63946;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Hospital Selection */
+    .hospital-select { margin-bottom: 20px; padding: 10px; width: 100%; border-radius: 5px; border: 1px solid #ccc; }
+
+    /* Donation Item Card */
+    .donation-items{
+      display: flex;
+      justify-content: space-around;
+    }
+    .donation-item { background-color: #fff; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); flex-wrap: wrap; width: 500px; }
+    .donation-item h3 { color: #333; }
+    .priority { font-size: 0.9em; font-weight: bold; padding: 4px 8px; border-radius: 5px; }
+    .priority.high { background-color: #fee2e2; color: #b91c1c; }
+    .priority.medium { background-color: #fef3c7; color: #b45309; }
+
+    /* Donation Buttons and Custom Input */
+    .amount-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+    .amount-button { padding: 10px 15px; border-radius: 5px; background-color: #f1f5f9; cursor: pointer; color: #333; }
+    .amount-button.selected { background-color: #e63946; color: white; }
+    .custom-amount { width: calc(100% - 20px); padding: 10px; margin-top: 5px;margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc; }
+
+    /* Donate Button */
+    .donate-now { display: block; width: 100%; padding: 12px; border-radius: 5px; background-color: #e63946; color: white; text-align: center; font-size: 1.1em; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-logo">
+      <h1>HerHealth</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="hospital.html">Hospitals</a>
+      <a href="donation.html"class="donate-button">Donate</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Donation Item Card Example -->
+  <div class="donation-items">
+    <div class="donation-item">
+      <h3>Ventilators,Diagnostic machines and Protective equipment</h3>
+      <p>Taluk Government Hospital</p>
+      <span class="priority high">High Priority</span>
+      <p>Latest generation Ventilator for Patients.</p>
+      <p><strong>Target:</strong> &#8377 7,50,000</p>
+      <!-- Amount Selection -->
+      <div class="amount-buttons">
+        <button class="amount-button" onclick="selectAmount(50)"> &#8377 50</button>
+        <button class="amount-button" onclick="selectAmount(100)"> &#8377 100</button>
+        <button class="amount-button" onclick="selectAmount(250)"> &#8377 250</button>
+        <button class="amount-button" onclick="selectAmount(500)"> &#8377 500</button>
+        <button class="amount-button" onclick="selectAmount(1000)"> &#8377 1000</button>
+      </div>
+      <input type="number" class="custom-amount" placeholder="&#8377 Custom Amount">
+      <button class="donate-now" onclick="alert('Thank you for your donation!')">Donate Now ❤️</button>
+    </div>
+    <!-- Donation Item Card Example -->
+    <div class="donation-item">
+      <h3>Girls and Women In Need</h3>
+      <p>Victoria Hospital</p>
+      <span class="priority medium">Medium Priority</span>
+      <p>Smallest Amount can help girls and women in need</p>
+      <p><strong>Target:</strong> &#8377 1,00,000</p>
+      <!-- Amount Selection -->
+      <div class="amount-buttons">
+        <button class="amount-button" onclick="selectAmount(50)"> &#8377 50</button>
+        <button class="amount-button" onclick="selectAmount(100)"> &#8377 100</button>
+        <button class="amount-button" onclick="selectAmount(250)"> &#8377 250</button>
+        <button class="amount-button" onclick="selectAmount(500)"> &#8377 500</button>
+        <button class="amount-button" onclick="selectAmount(1000)"> &#8377 1000</button>
+      </div>
+      <input type="number" class="custom-amount" placeholder="&#8377 Custom Amount">
+      <button class="donate-now" onclick="alert('Thank you for your donation!')">Donate Now ❤️</button>
+    </div>
+  </div>
+
+<script>
+  // Example function to highlight selected amount button
+  function selectAmount(amount) {
+    const buttons = document.querySelectorAll('.amount-button');
+    buttons.forEach(btn => btn.classList.remove('selected'));
+    event.target.classList.add('selected');
+  }
+</script>
+
+</body>
+</html>

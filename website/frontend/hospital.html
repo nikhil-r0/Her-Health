@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Hospitals</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+    }
+    /* Header Styling */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f8f8f8;
+      border-bottom: 2px solid #ddd;
+    }
+    .header-logo h1 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .header-nav a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+    .header-nav a:hover {
+      background-color: #ddd;
+    }
+    .donate-button {
+      background-color: #e63946;
+      color: #fff;
+      font-weight: bold;
+    }
+    /* Main Content */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      margin: 40px auto;
+      text-align: center;
+      padding: 20px;
+    }
+    .intro{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .main-content h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .main-content p {
+      display: flex;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    /* Hospital Card */
+    .hospital-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px 10px;
+      padding: 20px;
+      text-align: left;
+      width: 100%;
+    }
+    .hospital-cards{
+      flex-grow: 1;
+      width: 1000px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .hospital-card img {
+      width: 100%;
+      height: 246px;
+      border-radius: 8px;
+    }
+    .hospital-info {
+      padding: 15px 0;
+    }
+    .hospital-info h3 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .hospital-info p {
+      color: #666;
+      margin: 5px 0;
+    }
+    .location {
+      display: flex;
+      align-items: center;
+      color: #555;
+    }
+    .location-icon {
+      margin-right: 5px;
+    }
+    .needs-list {
+      margin-top: 10px;
+      padding-left: 30px;
+    }
+    .contact-info {
+      margin-top: 10px;
+      color: #555;
+    }
+    .donate-now-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #e63946;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .donate-now-btn:hover {
+      background-color: #c62839;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-logo">
+      <h1>HerHealth</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="hospital.html">Hospitals</a>
+      <a href="donation.html" class="donate-button">Donate</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+ 
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="intro">
+      <h2>Our Partner Hospitals</h2>
+      <p>Learn about the rural hospitals we support and their current needs.</p>
+    </div>
+    <!-- Hospital Card -->
+    <div class="hospital-cards">
+      <div class="hospital-card">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMN-m6adISL3Fc2eCiYiYe8zS79OFHu4x3XiwwS=s1360-w1360-h1020" alt="Hospital Image">
+        <div class="hospital-info">
+          <h3>Taluk Government Hospital</h3>
+          <div class="location">
+            <span class="location-icon">📍</span> Location:Hoskete,Bangalore Rural NH-4,Hoskote Pin:562114
+          </div>
+          <p>This hospital serves the local community and is in need of medical equipment to enhance patient care.</p>
+          <ul class="needs-list">
+            <li>Ventilators</li>
+            <li>Diagnostic machines(Electrocardiograph (ECG),X-ray machine)</li>
+            <li>Protective equipment(Gloves,Masks,Gowns)</li>
+          </ul>
+          <p class="contact-info">Contact: (123) 456-7890 </p>
+          <p class="Email">email@example.com</p>
+          <a href="donation.html" class="donate-now-btn">Donate to this Hospital</a>
+        </div>
+      </div>
+      <!-- Hospital Card -->
+      <div class="hospital-card">
+        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/37/080p3040737/catalogue/dr-devanniah-m-c-bowring-and-lady-curzon-hospital-road-bangalore-general-physician-doctors-ncba7.jpg?w=3840&q=75" alt="Hospital Image">
+        <div class="hospital-info">
+          <h3>Bowring and Lady Curzon Hospital</h3>
+          <div class="location">
+            <span class="location-icon">📍</span> Location: Shivaji Nagar,Bengaluru Pin:560001
+          </div>
+          <p>This hospital serves the local community and is in need of Funds for girls and women with Polycystic Ovary Syndrome (PCOS)</p>
+          <ul class="Number of girls and women in need">
+            <p>Number of girls and women in need</p>
+            <li>98 girls and women</li>
+          </ul>
+          <p class="contact-info">Contact: 080 26701150 </p>
+          <p class="Email">email@example.com</p>
+          <a href="donation.html" class="donate-now-btn">Donate to this Hospital</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Repeat the above hospital card for additional hospitals as needed -->
+
+  </div>
+
+</body>
+</html>
